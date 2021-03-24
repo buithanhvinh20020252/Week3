@@ -6,47 +6,23 @@ int main()
 	int i, j;
 	cin >> s;
 	int test =0;
-	if(s.size()%2==0)
+	int length=s.size();
+	for (i=0;i<length;i++)
 	{
-		for (i=0;i<(s.size()/2)-1;i++)
+		if(s[i] != s[length-i-1])
 		{
-			for (j=s.size()-1-i;j>=s.size()/2;j--)
-			{
-				if (s[i]==s[j])
-				{
-					test=1;
-				}
-			
-			}
+			test=1;
+			break;
 		}
-		if(test==1)
-		{
-			cout << "Yes";
-		}
-		else
+	}
+	
+		if(test)
 		{
 			cout << "No";
 		}
-	}
-	if(s.size()%2!=0)
-	{
-		for(i=0;i<(s.size()/2)-2;i++)
-		{
-			for(j=s.size()-1-i;j>s.size()/2;j--)
-			{
-				if(s[i]==s[j])
-				{
-					test=1;
-				}
-			}
-		}
-		if(test==1)
+		else
 		{
 			cout << "Yes";
 		}
-		else
-		{
-			cout << "No";
-		}
-	}
+	
 }
