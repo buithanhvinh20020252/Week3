@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
 	string s;
-	int i, j;
+	int i;
 	cin >> s;
 	int test =0;
 	int length=s.size();
